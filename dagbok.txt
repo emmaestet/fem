@@ -1,0 +1,10 @@
+checkSubdomain
+initiateMesh
+numericalData
+subdomainNumbering
+plotEdges
+
+2017-05-10
+findEdge
+plotEdges
+flw2te i projekt

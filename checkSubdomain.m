@@ -1,3 +1,4 @@
+%plots subdomain to be identified
 %kan automatiseras
 for j = 1:3
     subd = j;
