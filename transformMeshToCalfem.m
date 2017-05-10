@@ -1,3 +1,4 @@
+%pre-given script for conversion
 nelm=length(t(1,:));
 edof(:,1)=1:nelm;
 edof(:,2:4)=t(1:3,:)';

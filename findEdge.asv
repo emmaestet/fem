@@ -1,0 +1,19 @@
+function edge = findEdge(e,node)
+%FINDEDGE Finds which boundary a node is located on
+%   using edge numbering in e.
+
+edge = [e(5,e(1,:)==node) e(5,e(2,:)==node)];
+if isempty(edge)
+    edge = 0;
+elseif edge(1) == edge(2) %om noden inte ligger i ett hörn
+    edge = edge(1);    
+end
+
+%altedge = edge(edge ~= 3)
+if sum(edge(edge == 3)) %om noden ligger på gräns 3 (kanske 12)
+    if coord(node,1) == 0
+        edge = [6 12];
+    if coord(node,1) < 0.2
+        edge = 3
+end
+
