@@ -13,16 +13,16 @@ if edge(1) == edge(2) %om noden inte ligger i ett hörn
     edge = edge(1);    
 end
 
+% if sum(edge(edge == 3)) %om noden ligger på gräns 3 (kanske 12)
+%     load p;
+%     if p(1,node) == 0
+%         edge = [6 12];
+%     elseif p(1,node) < 0.2
+%         edge = 12;
+%     elseif p(1,node) == 0.2
+%         edge = [12 3];
+%     end
+% end
+% 
 
-
-if sum(edge(edge == 3)) %om noden ligger på gräns 3 (kanske 12)
-    load p;
-    if p(1,node) == 0
-        edge = [6 12];
-    elseif p(1,node) < 0.2
-        edge = 12;
-    elseif p(1,node) == 0.2
-        edge = [12 3];
-    end
 end
-
