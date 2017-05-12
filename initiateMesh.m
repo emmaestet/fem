@@ -1,5 +1,6 @@
 load('e.mat'); %kanter http://se.mathworks.com/help/pde/ug/mesh-data.html
 load('p.mat'); %koordinater för noder
 load('t.mat'); %index på noder som tillhör element, sista raden vilken subdomän
-create12;
 transformMeshToCalfem;
+create12;
+subdomainNumbering;

@@ -3,4 +3,4 @@ numericalData;
 
 calculateTemp;
 
-calculateStrains;
+%calculateStrains;

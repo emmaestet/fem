@@ -12,3 +12,15 @@ for i = 1:length(e);
 end
 hold off
 clear punkter;
+
+%%
+figure;
+axis([0 1 0 0.6]);
+hold on
+for elm = 1:20
+for i = 1:3
+scatter(ex(elm,i),ey(elm,i));
+pause(0.5)
+end
+end
+hold off

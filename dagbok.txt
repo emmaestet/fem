@@ -8,3 +8,11 @@ plotEdges
 findEdge
 plotEdges
 flw2te i projekt
+
+
+
+
+
+problem:
+enheter
+mesh för 12
