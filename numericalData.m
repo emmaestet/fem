@@ -42,7 +42,8 @@ adata(smd) = atemp(smdtemp);
 
 clear Etemp vtemp ktemp ptemp ctemp atemp pcbtemp soldertemp smdtemp;
 
-T0data = 30;
+kelvin = 0; %om 0 görs beräkningar i Celsius, om 273 görs beräkningar i Kelvin
+T0data = kelvin+30;
 acdata = 40;
 qeldata = 9e3;
-Tinfdata = 20;
+Tinfdata = kelvin+20;

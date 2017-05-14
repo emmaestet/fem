@@ -33,22 +33,29 @@ for k = 1:2  %potentiellt två ränder per element
         case qelbound
             q = qeldata;
         case convbound
-            q = -Tinfdata*acdata;
-            Ke = Ke + plantml(ex(elm,:),ey(elm,:),acdata*boundlength/1000);
+%             q = (((a(p1)-Tinfdata)+(a(p2)-Tinfdata))/2)*acdata;
+%             q = -q;
+%             qn = q;
+%             Ke = Ke + plantml(ex(elm,:),ey(elm,:),acdata*boundlength/1000);
             %kan ej använda plantml!! (eller kanske dividerat med area
             %gånger längd
-%             q = 0;
-%             bc = [bc; p1 Tinfdata; p2 Tinfdata];
+            q = 0;
+            if ~sum(bc(:,1)==p1)
+                bc = [bc; p1 Tinfdata];
+            end
+            if ~sum(bc(:,1)==p2)
+                bc = [bc; p2 Tinfdata];
+            end
         case zerobound
             q = 0;
         otherwise
             q = 0;
-            boundlength = 1;
+            %boundlength = 1;
     end
     
-    node1loc = [nodes == p1];
-    node2loc = [nodes == p2];
-    %fevalue = 0.2*q/boundlength;
+    node1loc = nodes == p1;
+    node2loc = nodes == p2;
+    
     fevalue = q * boundlength / 1000;
     fe(node1loc) = fe(node1loc) + fevalue/2;
     fe(node2loc) = fe(node2loc) + fevalue/2;
